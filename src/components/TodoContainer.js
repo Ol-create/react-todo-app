@@ -1,32 +1,22 @@
 import React from "react"
-import TodosList from "./TodosList";
+import TodoItem from "./TodoItem";
 
-class TodoContainer extends React.Component {
-	state = {
-		todos: [
-		  {
-			id: 1,
-			title: "Setup development environment",
-			completed: true
-		  },
-		  {
-			id: 2,
-			title: "Develop website and add content",
-			completed: false
-		  },
-		  {
-			id: 3,
-			title: "Deploy to live server",
-			completed: false
-		  }
-		]
-	   };
-	   render() {
-		return (
-		  <div>
-			<TodosList todos={this.state.todos} />
-		  </div>
-		);
-	  }
+class TodosList extends React.Component {
+  render() {
+    return (
+      <ul>
+        {this.props.todos.map(todo => (
+          <TodoItem
+            key={todo.id}
+            todo={todo}
+            handleChangeProps={this.props.handleChangeProps}
+            deleteTodoProps={this.props.deleteTodoProps}
+            setUpdate={this.props.setUpdate}
+          />
+        ))}
+      </ul>
+    )
+  }
 }
-export default TodoContainer
+
+export default TodosList
