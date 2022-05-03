@@ -1,6 +1,6 @@
 {
   "name": "react-todo-app",
-  "homepage": "https://jsug9.github.io/react-todo-app",
+  "homepage": "https://Ol-create.github.io",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -21,9 +21,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
