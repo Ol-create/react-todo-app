@@ -6,6 +6,8 @@ This ToDo App is built with react.
  - You can check completed task
  - You can delete task
 
+## Project [Link](https://ol-create.github.io/react-todo-app)
+
 In the project directory, you can run:
 
 ### `npm start`
